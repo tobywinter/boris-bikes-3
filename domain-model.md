@@ -15,9 +15,6 @@ verb - release, working
 Objects 		Messages 
 
 Person 
-Bike
+Bike 			check_bike_condition 	
 Docking_Station release_bike
 
-Person
-Bike 			check_bike_condition
-		
