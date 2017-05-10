@@ -36,4 +36,12 @@ end
 		expect { subject.release_bike }.to raise_error('No bikes available')
 	end
 
+	it "Responds to at_capacity?" do
+		expect(subject).to respond_to :at_capacity?
+	end
+
+	it "Raises error if dock is at capacity" do
+		expect{subject.dock(bike)}.to raise_error("Dock is at capacity")
+	end
+
 end

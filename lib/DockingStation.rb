@@ -11,6 +11,7 @@ attr_reader :bike
 
 #allows user to dock bike
   def dock(bike)
+    fail "Dock is at capacity" unless at_capacity? == false
     @bike = bike
   end
 
@@ -18,5 +19,8 @@ attr_reader :bike
     true
   end
 
+  def at_capacity?
+    false
+  end
 
 end
