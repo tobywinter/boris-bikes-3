@@ -5,7 +5,7 @@ describe DockingStation do
 	it { is_expected.to respond_to :release_bike }
 describe '#release_bike' do
 	it "releases a bike" do
-		@bike = Bike.new
+		#@bike = Bike.new
 		expect(subject.release_bike).to eq @bike
 	end
 end
@@ -26,7 +26,7 @@ end
 	it "responds to bike_available?" do
 		expect(subject).to respond_to :bike_available?
 	end
-
+ 
 #	it "bike available returns true" do
 #		expect(subject.bike_available?).to eq true
 #	end
