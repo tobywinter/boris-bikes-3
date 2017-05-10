@@ -40,8 +40,17 @@ end
 		expect(subject).to respond_to :at_capacity?
 	end
 
-	it "Raises error if dock is at capacity" do
-		expect{subject.dock(bike)}.to raise_error("Dock is at capacity")
+#	it 'at_capacity returns false' do
+#		expect(subject.at_capacity?).to eq false
+#	end
+
+	describe '#dock' do
+		it "Raises error if dock is at capacity" do
+			@bike = Bike.new
+			subject.dock(@bike)
+			expect{subject.dock(@bike)}.to raise_error("Dock is at capacity")
+		end
 	end
+
 
 end
