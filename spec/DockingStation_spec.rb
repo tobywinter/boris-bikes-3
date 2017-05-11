@@ -26,25 +26,9 @@ end
 		expect(subject.release_bike.class).to eq bike.class
 	end
 
-	it "responds to bike_available?" do
-		expect(subject).to respond_to :bikes_available?
-	end
-
-#	it "bike available returns true" do
-#		expect(subject.bike_available?).to eq true
-#	end
-
 	it "raises error if bike unavailable" do
 		expect { subject.release_bike }.to raise_error('No bikes available')
 	end
-
-	it "Responds to at_capacity?" do
-		expect(subject).to respond_to :at_capacity?
-	end
-
-#	it 'at_capacity returns false' do
-#		expect(subject.at_capacity?).to eq false
-#	end
 
 	describe '#dock' do
 		it "Raises error if dock is at capacity" do
