@@ -37,5 +37,13 @@ end
 		end
 	end
 
+	it "DockingStation accepts capacity parameter" do
+		station = DockingStation.new(50)
+		expect(station.capacity).to eq station.capacity
+	end
+
+	it "DockingStation default capacity equals 20" do
+		expect(subject.capacity).to eq 20
+	end
 
 end
