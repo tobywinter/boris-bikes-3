@@ -37,13 +37,19 @@ end
 		end
 	end
 
-	it "DockingStation accepts capacity parameter" do
+	it "accepts capacity parameter" do
 		station = DockingStation.new(50)
 		expect(station.capacity).to eq station.capacity
 	end
 
-	it "DockingStation default capacity equals 20" do
+	it "default capacity equals 20" do
 		expect(subject.capacity).to eq 20
+	end
+
+	it "can report bike as broken" do
+		bike = Bike.new
+		subject.report_broken(bike)
+		expect(bike.working).to eq false
 	end
 
 end
